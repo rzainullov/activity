@@ -1,0 +1,85 @@
+@keyframes dimming{
+    from {
+      
+    }
+  
+    to {
+      
+    }
+  
+    50% {
+      width:40px
+    }
+  }
+  
+.galaxy {
+    width: 250px;
+    position: absolute;
+    
+}
+.galaxy__container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    .star__a {
+        position: absolute;
+        width: 30px;
+        top: 150px;
+        left: 150px;
+        animation: dimming 1s linear infinite
+        
+        
+    }
+    .star__b {
+        position: absolute;
+        width: 30px;
+        top: 200px;
+        animation: dimming 1s linear infinite;
+    }
+    .star__c {
+        position: absolute;
+        width: 20px;
+        top: 20px;
+        left: 230px;
+        animation: dimming 1s linear infinite;
+    }
+    .star__d {
+        position: absolute;
+        width: 30px;
+        top: 30px;
+        left: 100px;
+        animation: dimming 1s linear infinite;
+    }
+    .star__solar {
+        position: absolute;
+        width: 30px;
+        top: 150px;
+        left: 150px;
+        
+        
+        
+    }
+    .star__aldebaran {
+        position: absolute;
+        width: 30px;
+        top: 200px;
+        background-color: red;
+        animation: dimming 1s linear infinite;
+        border-radius: 3px;
+    }
+    .star__sirius {
+        position: absolute;
+        width: 20px;
+        top: 20px;
+        left: 230px;
+        
+        
+    }
+    .star__betelgeuse {
+        position: absolute;
+        width: 30px;
+        top: 30px;
+        left: 100px;
+        
+    }
+}

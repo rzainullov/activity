@@ -1,0 +1,62 @@
+
+@keyframes rotate{
+    from {
+      
+    }
+  
+    to {
+      
+    }
+  
+    25% {
+      transform: rotate(15deg);
+    }
+    75% {
+       transform: rotate(-15deg);  
+    }
+  }
+.solar_system {
+    position: relative;
+    height: 366px;
+    width: 466px;
+    background:url('../assets/images/Sun.svg') no-repeat;
+    background-size: 250px;
+    background-position-x: 0px;
+    background-position-y: center;
+    #mercury {
+        position: absolute;
+        top: 50%;
+        left: 55%;
+    }
+    #venus {
+        position: absolute;
+        top: 45%;
+        left: 75%;
+    }
+    #earth {
+        position: absolute;
+        top: 40%;
+        left: 100%;
+        animation: rotate 0.5s linear infinite;
+    }
+    #earth__orbit {
+        position: absolute;
+        background:url('../assets/images/earth.svg') no-repeat;
+        width: 116px;
+        height: 116px;
+        top: 40%;
+        left: 99%;
+        #lunar{
+            position: absolute;
+            top: 40%;
+            left: 90%;
+            animation: rotate 0.5s linear infinite;
+        }
+        
+    }
+   
+        
+
+}
+
+

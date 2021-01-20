@@ -1,0 +1,11 @@
+$margin: 0 auto;
+
+.wrapper {
+    margin: $margin;
+    display: flex;
+    background-color: #010017;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Hind Siliguri', sans-serif;
+    color: #74818c;
+}

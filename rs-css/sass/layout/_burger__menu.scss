@@ -1,0 +1,47 @@
+.burger__menu {
+    position: absolute;
+    height: 99%;
+    width: 30%;
+    top:0;
+    right: -30%;
+    background-color: #000022;;
+    transform: translateX(0%);
+    transition: transform 0.2s ease-in;
+    &__container {
+        height: 90%;
+        width: 90%;
+        margin: 0 auto;
+        h1 {
+           font-size: 28px; 
+           margin-top:10px;
+        }
+    }
+    &__content {
+        width: 100%;
+    }
+    
+}
+.level__list {
+    margin-top: 50px;
+    .level{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 3px;
+        color: #9da2a7;
+        #complete__status{
+            i {
+                font-size: 30px;
+                font-weight: 900;
+            }
+        }
+        &__number{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        &:hover{
+            background-color: #1c1b6b;
+        }
+    }
+    
+}

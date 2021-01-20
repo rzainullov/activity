@@ -1,0 +1,67 @@
+$test_border: 1px solid white;
+%window {
+    width: 50%;
+    .window__head {
+        display:flex;
+        justify-content:space-between;
+        border: $test_border;
+    }
+    .file__window {
+        height: 432px;
+        position: relative;
+        padding: 10px 10px 10px 46px;
+        border: $test_border;
+        .line__numbers {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: menlo, monospace;
+            padding: 10px 10px;
+            height: 432px;
+            line-height: 150%;
+            text-align: right;
+            border-right: 1px solid white;
+           
+        }
+    }  
+}
+
+@mixin container(){
+    width:90%;
+    margin:0 auto;
+} 
+
+.main {
+    height:600px;
+    width:100%;
+    &__container{
+        @include container();
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .main__desk {
+            margin: 0 auto;
+            .level__name {
+                font-size: 50px;
+                margin-top:30px;
+            }
+            .level__picture{
+                margin-top:30px;
+            }
+        }
+        .main__editor {
+            margin-top: 0px;
+            width:100%;
+            height: 70%;
+            display: flex;
+            font-family: menlo, monospace;
+            font-size: 14px;
+            line-height: 150%;
+        }
+        
+    }
+    
+}
+.main__editor__pane {
+    @extend %window;
+}

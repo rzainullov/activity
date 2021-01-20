@@ -1,0 +1,31 @@
+
+@keyframes alien_appearing {
+    from {
+      left: -400px;
+    }
+  
+    to {
+      left: -400px;
+    }
+  
+    25% {
+      left: 0px
+    }
+    50% {
+      left: 0px
+    }
+    75% {
+      left: 0px
+    }
+
+  }
+  .alien {
+    left: -400px;
+    position: absolute;
+    width: 400px;
+    z-index: 2000; 
+    
+}
+  .alien__appearing {
+    animation: alien_appearing 10s linear;
+  }

@@ -1,0 +1,35 @@
+@keyframes keydown {
+    from {
+      
+    }
+  
+    to {
+    
+    }
+  
+    
+    50% {
+        box-shadow: none;
+        top: 16px;
+        
+
+  }
+}
+.key_enter {
+    width: 37px;
+    height: 15px;
+    background: #cabdbd;
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    border: 1px solid black;
+    box-shadow: 0px 4px grey;
+    font-size: 9px;
+    font-family: inherit;
+    outline: none;
+    text-decoration: none;
+    
+}
+.keydown {
+    animation: keydown 0.1s linear;
+}

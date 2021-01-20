@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    box-sizing: border-box;
+    background-image: url('/assets/images/morning/01.jpg');
+    background-position: center center;      
+    background-repeat: no-repeat;      
+    background-attachment: fixed;      
+    background-size: cover;  
+    font-family: 'Nunito', sans-serif;
+    color:white    
+    
+   
+
+}
+
+.momentum__wrapper {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.momentum__content__one {
+    width:100%;
+    max-width: 1600px;
+    /* height:50%; */
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    justify-content: center;
+    align-items: baseline;
+
+    
+    
+}
+
+@media(max-width: 1024px) {
+    .momentum__content__one {
+        width:100%;
+        max-width: 1024px;
+        /* height:50%; */
+        display:flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+}
+@media(max-width: 500px) {
+    
+    #date{
+        font-size: 1em;
+    }
+    #time{
+        font-size: 2em;
+    }
+}
+
+.weather {
+    width: 25%;
+    max-width: 400px;
+    min-width: 300px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    
+}
+.date__time {
+    width: 38%;
+    max-width: 608px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#date{
+    font-size: 2em;
+}
+#time{
+    font-size: 5em;
+}
+.quotes {
+    width: 33%;
+    max-width: 400px;
+    min-width: 300px;
+    text-align: center;
+   
+}
+.quote {
+    font: 'Nunito', sans-serif;
+    font-style: italic;
+    margin: 0;
+    background: #eee;
+    color: black;
+    padding: 1em;
+    border-radius: 1em;
+  }
+  .quote figcaption,
+  .quote blockquote {
+    margin: 1em;
+    text-align: left;
+  }
+  .quote figcaption {
+    text-align: right;
+  }
+  .btn, #btn__change__bg {
+    font: 'Nunito';
+    width: 200px;
+    height: 50px;
+    border: 0;
+    margin: 10px;
+    outline: none; 
+    background-color: transparent;
+    color:white;
+    border: 2px solid white;
+  }
+  .btn:hover ,#btn__change__bg:hover {
+      cursor: pointer;
+      opacity: 0.8;
+  }
+
+.weather, .date__time, .quotes, .greeting, .focus {
+    border-radius: 5%;
+    /* border: 2px solid white;
+    background-color: gray; */
+    opacity: 0.9;
+   
+}
+.weather {
+    background: #eee;
+    color: black;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    width: 33%;
+    max-width: 400px ;
+    
+    
+
+
+}
+
+.city__icon{
+    
+    grid-row: 1;
+    grid-column: 1 / 2;
+    
+}
+.city__icon__item {
+    width:50px;
+    height: 50px;
+    
+    
+}
+.city {
+    grid-row: 1;
+    grid-column: 2 / 3;
+    
+}
+.weather-icon.owf {
+    grid-row: 1;
+    grid-column: 3 / 4;
+    
+}
+.weather-description {
+    grid-row: 1;
+    grid-column: 4 / 5;
+}
+.temperature__icon {
+    grid-row: 2;
+    grid-column: 1 / 2;
+}
+
+.temperature__icon__item {
+    width:50px;
+    height: 50px;
+
+}
+
+.temperature {
+    grid-row: 2;
+    grid-column: 2 / 43;
+}
+.pressure__icon {
+    grid-row: 2;
+    grid-column: 3 / 4;
+    
+}
+.pressure__icon__item {
+   
+    width:50px;
+    height: 50px;
+}
+
+.pressure{
+    grid-row: 2;
+    grid-column: 4 / 5;
+}
+
+.wind__icon {
+    grid-row: 3;
+    grid-column: 1 / 2;
+    
+}
+.wind__icon__item {
+    width:50px;
+    height: 50px;
+}
+.wind{
+    grid-row: 3;
+    grid-column: 2 / 3;
+}
+.humidity__icon{
+    grid-row: 3;
+    grid-column: 3 / 4;
+}
+
+.humidity__icon__item {
+    
+    width:50px;
+    height: 50px;
+
+}
+.humidity{
+    grid-row: 3;
+    grid-column: 4 / 5;
+}
+
+
+
+
+.momentum__content__two {
+    width:100%;
+    max-width: 1600px;
+    height:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    /* margin-top: 5%; */
+    
+    
+}
+
+.greeting {
+    width: 100%;
+    max-width: 1120px; 
+    height: 10%;
+    text-align: center;
+    
+}
+.focus {
+    width: 100%;
+    max-width: 960px;
+    height: 20%;
+    text-align: center;
+    
+    
+    
+}
+
+
+#greeting {
+    
+}
+#name {
+    
+}
+
+
+h1{
+    margin-bottom: 3rem;
+}
+
+h2{
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+#btn__change__bg {
+    margin-bottom: 20px;
+
+}
+

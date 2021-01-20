@@ -1,0 +1,265 @@
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(#c45252, orangered) no-repeat;
+    color:white;
+
+}
+.modal__window {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(black, orangered) no-repeat;
+    opacity: 0.9;
+
+}
+
+.modal__container{
+   
+    width:100%;
+    margin: 10% auto;
+
+}
+.modal__content{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+    /* min-width: 528px; */
+    height: 180%;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+}
+.modal__content p{
+    text-align: left;
+    width: 90%;
+    margin: 10px auto 10px;
+    font-size: 15px;
+}
+.modal__buttons {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+.modal__buttons a{
+    width: 120px;
+    height: 35px;
+    background-color: #70b1db;
+    border-radius: 15px;
+    font-weight: bold;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hello__heading {
+    font-size: 1.4em;
+}
+.top__results__window {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(black, orangered) no-repeat;
+    opacity: 0.9;
+
+}
+
+.top__results__container {
+    height: 50%;
+    width:50%;
+    margin: 10% auto;
+}
+.top__results__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    
+}
+.top__results__content a{
+    width: 110px;
+    height: 40px;
+    background-color: #70b1db;
+    border-radius: 15px;
+    font-weight: bold;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    
+}
+
+.table {
+    margin:0 auto;
+}
+#number{
+    width:30px;
+}
+td {
+    height: 10px;
+}
+.wrapper {
+    display: flex;
+    width:100vw;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+}
+.num__field{
+    border-radius: 2px;
+    font-size: 0;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+   
+    
+}
+.num__field:hover {
+    cursor: pointer;
+}
+
+.puzzle__content {
+    
+    margin: 0 auto;
+    display: grid;
+    background: white;
+    /* border:2px solid black; */
+    border-radius: 2px;
+    
+}
+
+.counter {
+    font-size: 26px;
+}
+.stop__watch {
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.choose__heading{
+    margin:10px auto;
+}
+
+.change__buttons{
+    display: flex;
+    width:80%;
+    column-gap: 5px;
+}
+
+.change__buttons a{
+    width: 60px;
+    background-color: #70b1db;
+    border-radius: 15px;
+    font-weight: bold;
+  
+    margin: 0 auto;
+}
+
+
+.operation__buttons{
+    /* display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    align-items: center; */
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 10px;
+    column-gap: 5px;
+  
+}
+
+
+.operation__buttons a{
+    width: 100px;
+    height: 40px;
+    background-color: #70b1db;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.operation__buttons a:hover, .change__buttons a:hover, .modal__buttons a:hover, .top__results__content a:hover {
+    cursor: pointer;
+    background-color: #a4c2d6;
+}
+.reset__button{
+ 
+}
+.save__game__button{
+
+}
+.upload__game__button {
+
+}
+.sound__button {
+
+}
+.auto__move__button{
+
+}
+
+.puzzle__three {
+    
+    grid-template-columns: repeat(3, 84px);
+    grid-template-rows:repeat(3, 84px); 
+
+}
+
+.puzzle__four{
+    
+    grid-template-columns: repeat(4, 63px);
+    grid-template-rows:repeat(4, 63px);
+    
+}
+
+.puzzle__five{
+   
+    grid-template-columns: repeat(5, 50.25px);
+    grid-template-rows:repeat(5, 50.25px);
+}
+.puzzle__six {
+   
+    grid-template-columns: repeat(6, 42px);
+    grid-template-rows:repeat(6, 42px);
+
+}
+
+.puzzle__seven{
+    
+    grid-template-columns: repeat(7, 36px);
+    grid-template-rows:repeat(7, 36px);
+}
+
+.puzzle__eight{
+   
+    grid-template-columns: repeat(8, 31.5px);
+    grid-template-rows:repeat(8, 31.5px);
+}
+
+
+.empty {
+  
+    border: 0;
+    outline: none;
+    background-color: transparent;
+}
+

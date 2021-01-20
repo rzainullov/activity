@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/owfont-regular.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Momentum</title>
+</head>
+<body>
+    <div class="momentum__wrapper">
+        <div class="momentum__content__one">
+            <div class="weather">
+                <div class="city__icon">
+                    <img src="assets/icons/city-svgrepo-com.svg" alt="city__icon" class="city__icon__item">
+                </div>
+                <div class="city" contenteditable="true"></div>
+                <i class="weather-icon owf"></i>
+                <div class="weather-description"></div>
+                <div class="temperature__icon">
+                    <img src="assets/icons/thermometer-svgrepo-com.svg" alt="temperature__icon" class="temperature__icon__item">
+                </div>
+                <div class="temperature"></div>
+                <div class="pressure__icon">
+                    <img src="assets/icons/Barometer3.svg" alt="barometer__icon" class="pressure__icon__item">
+                </div>
+                <div class="pressure"></div>
+                <div class="wind__icon">
+                    <img src="assets/icons/wind-sock_icon-icons.com_54224.svg" alt="barometer__icon" class="wind__icon__item">
+                </div>
+                <div class="wind"></div>
+                <div class="humidity__icon">
+                    <img src="assets/icons/humidity_weather_icon_129724.svg" alt="barometer__icon" class="humidity__icon__item">
+                </div>
+                <div class="humidity"></div>        
+            </div>
+            <div class="date__time">
+                <div id="date">Cуббота, 24 октября </div>
+                <div id="time">14:22:00</div>
+            </div>
+            <div class="quotes">
+                <figure class="quote">
+                    <blockquote>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore minima iure, doloremque eligendi deleniti odio minus pariatur debitis veniam doloribus corporis laboriosam vero omnis? Iste eius animi enim omnis ab.
+                    </blockquote>
+                    <figcaption> 
+                        Lenin
+                    </figcaption>
+                </figure>
+                <button class="btn">Цитата дня</button>
+            </div> 
+        </div>
+        <div class="momentum__content__two">
+            <div class="greeting">
+                <h1 class="heading__greeting">
+                    <span id="greeting">Добрый день,</span>
+                    <span id="name" contenteditable="true">[Введите ваше имя]</span>
+                </h1>
+            </div>
+            <div class="focus">
+                <h2>На чём Вы сегодня сфокусированы?</h2>
+        
+                <h2 id="focus" contenteditable="true">[Введите то, на чём Вы сфокусированы]</h2>
+            </div>
+            <button id="btn__change__bg">Сменить фоновое изображение</button>
+            
+    
+        </div>
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>

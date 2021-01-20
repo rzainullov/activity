@@ -1,0 +1,22 @@
+#arrow__left, #arrow__right {
+  background: none;
+    outline: none;
+    border: none;
+    width:30px;
+    height:30px;
+    
+    & > i {
+      color: #74818c;
+      font-size: 30px;
+      &:hover{
+        color: #c2cdcb
+      }
+      
+    }
+    &:hover{
+      cursor: pointer;
+      
+    
+    } 
+}
+

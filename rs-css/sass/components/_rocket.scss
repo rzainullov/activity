@@ -1,0 +1,38 @@
+@keyframes rocket_appearing {
+    from {
+      
+    }
+  
+    to {
+        bottom: 70%;
+    }
+
+
+
+  }
+@keyframes toSmall {
+    from {
+     
+    }
+  
+    to {
+        left: 30%;  
+        height: 0px;
+    }
+    
+    
+
+  }  
+.rocket {
+    bottom: 0px;
+    left:50%;
+    position: absolute;
+    height: 300px;
+    z-index: 2000; 
+    display:none;
+    
+}
+  .rocket__appearing{
+    display:block;
+    animation: rocket_appearing 7s linear, toSmall 7s linear
+  }
