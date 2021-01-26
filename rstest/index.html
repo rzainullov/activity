@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/modal.css">
+  <link rel="stylesheet" href="styles/gameArea.css">
+	<link rel="stylesheet" href="styles/gameLobby.css">
+  <link rel="stylesheet" href="styles/scoresSheet.css">
+  <link rel="preload" href="img/game/dice-1.png" as="image">
+  <link rel="preload" href="img/game/dice-2.png" as="image">
+  <link rel="preload" href="img/game/dice-3.png" as="image">
+  <link rel="preload" href="img/game/dice-4.png" as="image">
+  <link rel="preload" href="img/game/dice-5.png" as="image">
+  <link rel="preload" href="img/game/dice-6.png" as="image">
+  <link rel="preload" href="img/red.png" as="image">
+  <link rel="preload" href="img/green.png" as="image">
+  <link rel="preload" href="img/roll.svg" as="image">
+  <link rel="preload" href="img/note.png" as="image">
+  <link rel="preload" href="img/modal-img.png" as="image">
+  <title>Document</title>
+  <!-- test deploy -->
+  <!-- Tests scripts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>mocha.setup('bdd');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>let assert = chai.assert;</script>
+  <!-- Tests scripts -->
+</head>
+
+<body>
+
+  <header class="header" data-header>
+    <div class="burger active" data-burger>
+      <div class="burger__strip"></div>
+      <div class="burger__strip"></div>
+      <div class="burger__strip"></div>
+    </div>
+  </header>
+
+  <main class="main" data-main>
+
+  </main>
+
+  <footer class="footer" data-footer>
+    <div class="footer__logo" onclick="location.href='https://rs.school/js/'"></div>
+
+    <div class="footer__year">2021</div>
+
+    <div class="footer__githubs">
+      <p>
+        authors: <br>
+        <a href="https://github.com/Maxtadont">github.com/Maxtadont</a><br>
+        <a href="https://github.com/Sitecreator143">github.com/Sitecreator143</a><br>
+        <a href="https://github.com/rzainullov">github.com/rzainullov</a><br>
+      </p>
+    </div>
+  </footer>
+
+  <div class="modal active" data-modal>
+
+  </div>
+
+  <script type="module" src="main.js"></script>
+
+  <!-- Tests scripts -->
+  <script type="module" src="./scripts/test/test.js"></script>
+  <div id="mocha"></div>
+  <!-- Tests scripts -->
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+/** Null styles */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:focus,:active { outline: none; }
+a:focus,a:active{ outline: none; }
+
+nav, footer, header, aside { display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.15;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input ::-ms-clear { display: none; }
+button { cursor: pointer; }
+a, a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+ul li { list-style: none; }
+img { vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: 400; }
+
+/** Normalize Styles */
+body { margin: 0; }
+main { display: block; }
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a { background-color: transparent; }
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b, strong { font-weight: bolder; }
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+small { font-size: 80%; }
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+img { border-style: none; }
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button, input { overflow: visible; }
+button, select { text-transform: none; }
+button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset { padding: 0.35em 0.75em 0.625em; }
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress { vertical-align: baseline; }
+textarea { overflow: auto; }
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; }
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details { display: block; }
+summary { display: list-item; }
+template { display: none; }
+[hidden] { display: none; }
+
+/** Styles for document */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+body {
+    font-family: 'Bangers', cursive;
+    font-weight: 400;
+    color: black;
+}
+
+/* Styles for header */
+.header {
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  z-index: 60;
+}
+.burger {
+  cursor: pointer;
+  height: 20px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.burger__strip {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  transition: all 0.3s ease;
+}
+.burger.active > .burger__strip:nth-child(1) {
+  top: 9px;
+  transform: rotate(45deg);
+}
+.burger.active > .burger__strip:nth-child(2) {
+  display: none;
+}
+.burger.active > .burger__strip:nth-child(3) {
+  top: -9px;
+  transform: rotate(-45deg);
+}
+
+/* Styles for main */
+.main {
+  height: calc(100% - 120px);
+  background: url("img/modal-img.png") no-repeat center center/cover;
+}
+
+/* Styles for footer */
+.footer {
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  z-index: 40;
+}
+.footer__logo {
+  cursor: pointer;
+  height: 50px;
+  width: 140px;
+  background: url("img/logo-rsschool.png") no-repeat center center/cover;
+}
+.footer__year {
+	font-size: 26px;
+	color: #b9b9b9;
+}
+.footer__githubs p {
+  text-transform: uppercase;
+  color: #b9b9b9;
+  margin: 0;
+}
+.footer__githubs a {
+  text-transform: uppercase;
+  color: #b9b9b9;
+}
+.footer__githubs a:hover {
+  color: #ffffff;
+}
+@media (max-width: 470px) {
+  .footer__logo {
+    display: none;
+  }
+  .footer__year {
+    display: none;
+  }
+}
