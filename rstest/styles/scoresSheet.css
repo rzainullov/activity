@@ -63,7 +63,7 @@
     } 
     [data-ss-empty-sheet] {
         height: 70vh;
-        max-height: 560px;
+        max-height: 430px;
         margin-top: 0%;
         min-width: 310px;
     }
