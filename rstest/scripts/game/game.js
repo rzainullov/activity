@@ -69,8 +69,15 @@ export class Game {
       scoresSheet.markCurrentPlayer();
       this.setEventListener();
     } else {
-      this.players = this.settings[1].settingValue;
       this.currentGameData = this.savedGameData;
+      //Временное решение. Изменение настроек должно выполняться в соответствие с сохраненным объектом настроек
+      //Имена игроков и их количество взяты из сохраненного объекта игры
+      this.settings[0].settingValue = this.currentGameData.players.length;
+      this.settings[1].settingValue = [];
+      this.currentGameData.players.forEach(player => {
+        this.settings[1].settingValue.push(player.playerName);
+      });
+      //Конец временного решения  
       initGameArea(this.settings, this.savedGameData);      
       this.restoreSavedGame();
       scoresSheet.markCurrentPlayer();

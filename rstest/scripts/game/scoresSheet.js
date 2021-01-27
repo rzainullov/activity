@@ -346,9 +346,9 @@ export class ScoresSheet {
       game.initNextAttempt();
       game.clearRollDiceArea();
       game.clearDiceCells();
-      game.currentGameData.currentCombination = [];
+      game.currentGameData.currentCombination = ["", "", "", "", ""];
       game.currentGameData.currentDices = [];
-      game.currentGameData.totalCombination = [];
+      game.currentGameData.totalCombination = "";
     }
   }
 

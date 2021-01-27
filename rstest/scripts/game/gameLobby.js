@@ -88,7 +88,7 @@ export class GameLobby {
     const diceCells = this.diceCells.childNodes;
     diceCells.forEach((item, i) => {
       const cell = item;
-      cell.attributes[0].value = currentCombination[i];
+      cell.attributes[0].nodeValue = currentCombination[i];
     });
   }
 
@@ -108,7 +108,7 @@ export class GameLobby {
     const dices = this.rollDiceArea.childNodes;
     dices.forEach((item, i) => {
       const dice = item;
-      dice.attributes[0].value = currentDices[i];
+      dice.attributes[0].nodeValue = currentDices[i];
     });
   }
 
