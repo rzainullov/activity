@@ -62,13 +62,20 @@ export class Modal {
     const logo = document.createElement("div");
     logo.classList.add("modal__logo");
     this.modal.appendChild(logo);
+
     const logoImg = document.createElement("div");
     logoImg.classList.add("modal__img");
     logo.appendChild(logoImg);
+
     const logoText = document.createElement("div");
     logoText.innerText = this.wordsArr[0];
     logoText.classList.add("modal__text");
     logo.appendChild(logoText);
+
+    const logoLogin = document.createElement("div");
+    logoLogin.innerText = this.localSettings.playerName;
+    logoLogin.classList.add("modal__login");
+    logo.appendChild(logoLogin);
   }
 
   createWrap() {
@@ -82,10 +89,34 @@ export class Modal {
     this.wrap.appendChild(wrapTitle);
   }
 
-  checkPlaySound(note) {
+  createInput(wordNumber) {
+    const input = document.createElement("input");
+    input.classList.add("modal__input");
+    input.placeholder = this.wordsArr[wordNumber];
+    this.wrap.appendChild(input);
+    return input;
+  }
+
+  createBtn(wordNumber) {
+    const btn = document.createElement("div");
+    btn.innerText = this.wordsArr[wordNumber];
+    btn.classList.add("modal__item");
+    this.wrap.appendChild(btn);
+    return btn;
+  }
+
+  createError(wordNumber) {
+    const err = document.createElement("div");
+    err.innerText = this.wordsArr[wordNumber];
+    err.classList.add("modal__error");
+    this.wrap.prepend(err);
+    return err;
+  }
+
+  checkPlaySound(noteName) {
     const isAudioOn = this.localSettings.playerSettings.find(el => el.settingName === "sound").settingValue === "on";
     if (isAudioOn) {
-      audioAPI.playNote(note);
+      audioAPI.playNote(noteName);
     }
   }
 }

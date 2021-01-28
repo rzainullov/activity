@@ -121,7 +121,7 @@ export class GameArea {
       }
     });
     this.scoresSheetButton.addEventListener("click", (e) => {
-      this.checkPlaySound("A3");
+      this.checkPlaySound("Push");
       if (e.target.textContent === `${languages[this.langIdx].gameArea[0]}`) {
         this.openScoresSheet(this.langIdx);
       } else {

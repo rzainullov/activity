@@ -29,6 +29,10 @@
 	font-size: 36px; 
 	text-transform: uppercase;
 }
+.modal__login {
+	font-size: 24px;
+	color:#7a1a0b;
+}
 @media (max-height: 700px) {
 	.modal__logo {
 		display: none;

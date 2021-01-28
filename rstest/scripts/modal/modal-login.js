@@ -15,11 +15,13 @@ export class ModalLogin extends Modal {
   }
 
   onVerifiedLogin() {
+    modalTypesObject.modalLogin.checkPlaySound("Success");
     loadSettingsFromDB(initModalMain);
     return this;
   }
 
   onUnVerifiedLogin() {
+    modalTypesObject.modalLogin.checkPlaySound("Error");
     modalTypesObject.modalLogin = new ModalLogin()
       .getSettings()
       .createModalLogin()
@@ -28,19 +30,18 @@ export class ModalLogin extends Modal {
   }
 
   pushLogin(login, passWord) {
-    this.checkPlaySound("A3");
     currentLogin.checkPassword(login, passWord, this.onVerifiedLogin, this.onUnVerifiedLogin);
     return this;
   }
 
   pushSignup() {
-    this.checkPlaySound("A3");
+    this.checkPlaySound("Push");
     modalTypesObject.modalSignup = new ModalSignup().getSettings().createModalSignup();
     return this;
   }
 
   pushBack() {
-    this.checkPlaySound("A3");
+    this.checkPlaySound("Push");
     modalTypesObject.modalMain = new ModalMain().getSettings().createModalMain();
     return this;
   }
@@ -51,50 +52,32 @@ export class ModalLogin extends Modal {
     this.createLogo();
     this.createWrap();
 
-    const login = document.createElement("input");
-    login.classList.add("modal__input");
-    login.placeholder = this.wordsArr[2];
-    this.wrap.appendChild(login);
+    const login = this.createInput(2);
 
-    const passWord = document.createElement("input");
-    passWord.classList.add("modal__input");
-    passWord.placeholder = this.wordsArr[3];
+    const passWord = this.createInput(3);
     passWord.setAttribute("type", "password");
-    this.wrap.appendChild(passWord);
 
-    const signin = document.createElement("div");
-    signin.innerText = this.wordsArr[4];
-    signin.classList.add("modal__item");
+    const signin = this.createBtn(4);
     signin.addEventListener("click", () => {
       this.pushLogin(login.value, passWord.value);
     });
-    this.wrap.appendChild(signin);
 
-    const signup = document.createElement("div");
-    signup.innerText = this.wordsArr[5];
-    signup.classList.add("modal__item");
+    const signup = this.createBtn(5);
     signup.addEventListener("click", () => {
       this.pushSignup();
     });
-    this.wrap.appendChild(signup);
 
     if (!this.isInitLogin) {
-      const back = document.createElement("div");
-      back.innerText = this.wordsArr[6];
-      back.classList.add("modal__item");
+      const back = this.createBtn(6);
       back.addEventListener("click", () => {
         this.pushBack();
       });
-      this.wrap.appendChild(back);
     }
     return this;
   }
 
   addErrorMessage() {
-    const err = document.createElement("div");
-    err.innerText = this.wordsArr[7];
-    err.classList.add("modal__error");
-    this.wrap.prepend(err);
+    this.createError(7);
     return this;
   }
 }

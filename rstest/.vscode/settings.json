@@ -3,5 +3,6 @@
         "dice",
         "linebreak",
         "unactive"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

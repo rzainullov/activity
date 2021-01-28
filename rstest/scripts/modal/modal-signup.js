@@ -9,6 +9,7 @@ export class ModalSignup extends Modal {
   }
 
   onSuccsessSignUp() {
+    modalTypesObject.modalSignup.checkPlaySound("Success");
     modalTypesObject.modalLogin = new ModalLogin()
       .getSettings()
       .createModalLogin();
@@ -16,6 +17,7 @@ export class ModalSignup extends Modal {
   }
 
   onErrorSignUp() {
+    modalTypesObject.modalSignup.checkPlaySound("Error");
     modalTypesObject.modalSignup = new ModalSignup()
       .getSettings()
       .createModalSignup()
@@ -34,7 +36,7 @@ export class ModalSignup extends Modal {
   }
 
   pushBack() {
-    modalTypesObject.modalLogin = new ModalLogin(false)
+    modalTypesObject.modalLogin = new ModalLogin()
       .getSettings()
       .createModalLogin();
     return this;
@@ -46,48 +48,28 @@ export class ModalSignup extends Modal {
     this.createLogo();
     this.createWrap();
 
-    const login = document.createElement("input");
-    login.classList.add("modal__input");
-    login.placeholder = this.wordsArr[2];
-    this.wrap.appendChild(login);
+    const login = this.createInput(2);
 
-    const passWord = document.createElement("input");
-    passWord.classList.add("modal__input");
-    passWord.placeholder = this.wordsArr[3];
+    const passWord = this.createInput(3);
     passWord.setAttribute("type", "password");
-    this.wrap.appendChild(passWord);
 
-    const repeatPassWord = document.createElement("input");
-    repeatPassWord.classList.add("modal__input");
-    repeatPassWord.placeholder = this.wordsArr[4];
+    const repeatPassWord = this.createInput(4);
     repeatPassWord.setAttribute("type", "password");
-    this.wrap.appendChild(repeatPassWord);
 
-    const signup = document.createElement("div");
-    signup.innerText = this.wordsArr[5];
-    signup.classList.add("modal__item");
+    const signup = this.createBtn(5);
     signup.addEventListener("click", () => {
-      this.checkPlaySound("A6");
       this.pushSignup(passWord.value, repeatPassWord.value, login.value);
     });
-    this.wrap.appendChild(signup);
 
-    const back = document.createElement("div");
-    back.innerText = this.wordsArr[6];
-    back.classList.add("modal__item");
+    const back = this.createBtn(6);
     back.addEventListener("click", () => {
-      this.checkPlaySound("A6");
       this.pushBack();
     });
-    this.wrap.appendChild(back);
     return this;
   }
 
   addErrorMessage() {
-    const err = document.createElement("div");
-    err.innerText = this.wordsArr[7];
-    err.classList.add("modal__error");
-    this.wrap.prepend(err);
+    this.createError(7);
     return this;
   }
 }

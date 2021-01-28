@@ -9,7 +9,6 @@ import { DB } from "../../main.js";
 import { game } from "../game/game.js";
 import { loadGameFromDB } from "../game/game.js";
 
-
 export class ModalMain extends Modal {
   createModalMain() {
     this.clearModalArea();
@@ -17,59 +16,41 @@ export class ModalMain extends Modal {
     this.createLogo();
     this.createWrap();
 
-    const wrapNewGame = document.createElement("div");
-    wrapNewGame.innerText = this.wordsArr[2];
-    wrapNewGame.classList.add("modal__item");
+    const wrapNewGame = this.createBtn(2);
     wrapNewGame.addEventListener("click", () => {
-      this.checkPlaySound("A4");
+      this.checkPlaySound("Push");
       this.newGame();
     });
-    this.wrap.appendChild(wrapNewGame);
 
-    const wrapSaveGame = document.createElement("div");
-    wrapSaveGame.innerText = this.wordsArr[3];
-    wrapSaveGame.classList.add("modal__item");
+    const wrapSaveGame = this.createBtn(3);
     wrapSaveGame.addEventListener("click", () => {
-      this.checkPlaySound("A4");
+      this.checkPlaySound("Push");
       this.saveGame();
     });
-    this.wrap.appendChild(wrapSaveGame);
 
-    const wrapLoadGame = document.createElement("div");
-    wrapLoadGame.innerText = this.wordsArr[4];
-    wrapLoadGame.classList.add("modal__item");
+    const wrapLoadGame = this.createBtn(4);
     wrapLoadGame.addEventListener("click", () => {
-      this.checkPlaySound("A4");
+      this.checkPlaySound("Push");
       this.loadGame();
     });
-    this.wrap.appendChild(wrapLoadGame);
 
-    const wrapSettings = document.createElement("div");
-    wrapSettings.innerText = this.wordsArr[5];
-    wrapSettings.classList.add("modal__item");
+    const wrapSettings = this.createBtn(5);
     wrapSettings.addEventListener("click", () => {
-      this.checkPlaySound("A4");
+      this.checkPlaySound("Push");
       modalTypesObject.modalSettings = new ModalSettings().getSettings().createModalSettings();
     });
-    this.wrap.appendChild(wrapSettings);
 
-    const wrapLogin = document.createElement("div");
-    wrapLogin.innerText = this.wordsArr[6];
-    wrapLogin.classList.add("modal__item");
+    const wrapLogin = this.createBtn(6);
     wrapLogin.addEventListener("click", () => {
-      this.checkPlaySound("A4");
+      this.checkPlaySound("Push");
       modalTypesObject.modalLogin = new ModalLogin(false).getSettings().createModalLogin();
     });
-    this.wrap.appendChild(wrapLogin);
 
-    const wrapRules = document.createElement("div");
-    wrapRules.innerText = this.wordsArr[7];
-    wrapRules.classList.add("modal__item");
+    const wrapRules = this.createBtn(7);
     wrapRules.addEventListener("click", () => {
-      this.checkPlaySound("A4");
+      this.checkPlaySound("Push");
       modalTypesObject.modalRules = new ModalRules().getSettings().createModalRules();
     });
-    this.wrap.appendChild(wrapRules);
     return this;
   }
 

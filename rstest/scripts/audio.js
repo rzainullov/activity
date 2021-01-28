@@ -2,39 +2,84 @@
 export class Audio {
   constructor() {
     this.context = new (window.AudioContext || window.webkitAudioContext)();
+    this.playTime = 0.5;
     this.notes = [
-      { noteName: "A0", noteFrequency: "27.5" },
-      { noteName: "A1", noteFrequency: "55" },
-      { noteName: "A2", noteFrequency: "110" },
-      { noteName: "A3", noteFrequency: "220" },
-      { noteName: "A4", noteFrequency: "440" },
-      { noteName: "A5", noteFrequency: "880" },
-      { noteName: "A6", noteFrequency: "1760" },
-      { noteName: "A7", noteFrequency: "3520" }
+      {
+        noteName: "Success",
+        noteParams: {
+          oscillatorFrequency: 500,
+          biquadFilterType: "peaking",
+          biquadFilterFrequency: 100,
+          biquadFilterGain: 25
+        }
+      },
+      {
+        noteName: "Push",
+        noteParams: {
+          oscillatorFrequency: 50,
+          biquadFilterType: "lowshelf",
+          biquadFilterFrequency: 200,
+          biquadFilterGain: 10
+        }
+      },
+      {
+        noteName: "Roll",
+        noteParams: {
+          oscillatorFrequency: 15,
+          biquadFilterType: "lowshelf",
+          biquadFilterFrequency: 200,
+          biquadFilterGain: 25
+        }
+      },
+      {
+        noteName: "Error",
+        noteParams: {
+          oscillatorFrequency: 100,
+          biquadFilterType: "lowshelf",
+          biquadFilterFrequency: 200,
+          biquadFilterGain: 25
+        }
+      }
     ];
   }
 
-  createOscillator() {
+  createOscillator(frequency) {
     this.oscillator = this.context.createOscillator();
     this.oscillator.type = "sine";
+    this.oscillator.frequency.value = frequency;
+    this.oscillator.connect(this.biquadFilter);
+    return this;
+  }
+
+  createBiquadFilter(type, frequency, gain) {
+    this.biquadFilter = this.context.createBiquadFilter();
+    this.biquadFilter.type = type;
+    this.biquadFilter.frequency.value = frequency;
+    this.biquadFilter.gain.value = gain;
+    this.biquadFilter.connect(this.gain);
   }
 
   createGain() {
     this.gain = this.context.createGain();
+    this.gain.gain.exponentialRampToValueAtTime(0.001, this.now + this.playTime);
     this.gain.connect(this.context.destination);
-    this.oscillator.connect(this.gain);
   }
 
-  playNote(note) {
-    const frequency = this.notes.find(el => el.noteName === note).noteFrequency;
-    this.createOscillator();
-    this.createGain();
+  findNote(noteName) {
+    const noteParams = this.notes.find(el => el.noteName === noteName).noteParams;
+    return noteParams;
+  }
 
-    this.oscillator.frequency.value = frequency;
+  playNote(noteName) {
     this.now = this.context.currentTime;
-    this.gain.gain.setValueAtTime(1, this.now);
-    this.gain.gain.exponentialRampToValueAtTime(0.001, this.now + 1);
+    const noteParams = this.findNote(noteName);
+    this.createGain();
+    this.createBiquadFilter(noteParams.biquadFilterType,
+      noteParams.biquadFilterFrequency,
+      noteParams.biquadFilterGain);
+    this.createOscillator(noteParams.oscillatorFrequency);
     this.oscillator.start(this.now);
-    this.oscillator.stop(this.now + 1);
+    this.oscillator.stop(this.now + this.playTime);
+    return this;
   }
 }

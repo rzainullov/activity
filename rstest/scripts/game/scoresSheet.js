@@ -324,7 +324,7 @@ export class ScoresSheet {
   }
 
   acceptCombination(target) {
-    this.checkPlaySound("A2");
+    this.checkPlaySound("Push");
     if (target.attributes[0].name === "data-player-prop" && !target.classList.contains("accepted")) {
       const parent = target.parentNode.childNodes;
       const acceptedCombo = target.getAttribute("data-player-prop");
@@ -415,8 +415,7 @@ export class ScoresSheet {
           this.acceptCombination(e.target);
         }
       } else {
-        this.checkPlaySound("A2");
-        this.checkPlaySound("A2");
+        this.checkPlaySound("Error");
       }
     });
   }

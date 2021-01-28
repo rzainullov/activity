@@ -9,22 +9,11 @@ import { audioAPI, globalSettings } from "../../main.js";
 import { currentLogin } from "../../main.js";
 import { DB } from "../../main.js";
 
+export var game = null;
 export function loadGameFromLocalStorage() {
   return JSON.parse(localStorage.getItem("game")) || defaultGameSettings;
 }
 
-export function loadGameFromDB() {
-  let loadGame = DB.loadGame(currentLogin.playerName);
-  loadGame
-    .then((loadedGame) => {
-      initGame(globalSettings.getSettings(), loadedGame);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
-
-export var game = null;
 const setHotKeys = (e) => {
   const keys = {
     " ": () => game.rollTheDices(),
@@ -65,20 +54,13 @@ export class Game {
   createNewGameArea() {
     if (this.savedGameData === null) {
       this.createNewGame(this.templateGameData, this.templatePlayerData);
+      this.currentGameData.settings = this.settings;
       initGameArea(this.settings, this.currentGameData);
       scoresSheet.markCurrentPlayer();
       this.setEventListener();
     } else {
       this.currentGameData = this.savedGameData;
-      //Временное решение. Изменение настроек должно выполняться в соответствие с сохраненным объектом настроек
-      //Имена игроков и их количество взяты из сохраненного объекта игры
-      this.settings[0].settingValue = this.currentGameData.players.length;
-      this.settings[1].settingValue = [];
-      this.currentGameData.players.forEach(player => {
-        this.settings[1].settingValue.push(player.playerName);
-      });
-      //Конец временного решения  
-      initGameArea(this.settings, this.savedGameData);      
+      initGameArea(this.savedGameData.settings, this.savedGameData);
       this.restoreSavedGame();
       scoresSheet.markCurrentPlayer();
       this.setEventListener();
@@ -142,7 +124,7 @@ export class Game {
     if (this.isGameFinished) {
       return null;
     }
-    this.checkPlaySound("A1");
+    this.checkPlaySound("Roll");
     if (game.currentGameData.currentAttempt === 3 && this.currentCombinationIsChosen === false) {
       return null;
     }
@@ -256,13 +238,13 @@ export class Game {
   }
 
   moveDiceToDicesCells(target) {
-    this.checkPlaySound("A2");
+    this.checkPlaySound("Push");
     this.putChosenDiceInFreeDiceCell(target);
     this.removeOneDice(target);
   }
 
   moveDiceToRollDiceArea(target) {
-    this.checkPlaySound("A1");
+    this.checkPlaySound("Push");
     this.putChosenDiceInRollDiceArea(target);
     this.removeOneDice(target);
   }
@@ -364,4 +346,14 @@ export function initGame(settings, savedGame = null) {
   main.innerHTML = "";
   game = new Game(settings, savedGame);
   game.createNewGameArea();
+}
+export function loadGameFromDB() {
+  let loadGame = DB.loadGame(currentLogin.playerName);
+  loadGame
+    .then((loadedGame) => {
+      initGame(globalSettings.getSettings(), loadedGame);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }

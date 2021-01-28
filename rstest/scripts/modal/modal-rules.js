@@ -14,14 +14,11 @@ export class ModalRules extends Modal {
     wrapText.classList.add("modal-rules__textarea");
     this.wrap.appendChild(wrapText);
 
-    const backSettings = document.createElement("div");
-    backSettings.innerText = this.wordsArr[3];
-    backSettings.classList.add("modal__item");
+    const backSettings = this.createBtn(3);
     backSettings.addEventListener("click", () => {
-      this.checkPlaySound("A4");
+      this.checkPlaySound("Push");
       modalTypesObject.modalMain = new ModalMain().getSettings().createModalMain();
     });
-    this.wrap.appendChild(backSettings);
     return this;
   }
 }

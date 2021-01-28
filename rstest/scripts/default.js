@@ -22,6 +22,7 @@ export const defaultGameSettings = {
   currentCombination: ["", "", "", "", ""],
   currentDices: [],
   totalCombination: "",
+  settings: defaultSettings,
   players: []
 };
 
