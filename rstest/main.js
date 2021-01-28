@@ -11,18 +11,19 @@ import anime from "./scripts/animejs/lib/anime.es.js";
 
 anime({
   targets: ".preloader__logo",
-  // translateX: "250",
-  rotate: "2turn",
+  rotate: "40turn",
   loop: true,
-  duration: 1000
+  easing: "steps(15)",
+  duration: "3000"
 });
+
 const finder = setInterval(() => {
   const modalLogo = document.querySelector(".modal__img");
   if (modalLogo !== null) {
     clearInterval(finder);
     document.querySelector(".preloader").style.display = "none";
   }
-}, 5000);
+}, 6000);
 
 export let currentLogin = new Login();
 export const globalSettings = new Settings(loadSettingsFromLocalStorage());
