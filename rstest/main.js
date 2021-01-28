@@ -7,7 +7,7 @@ import { Modal } from "./scripts/modal/modal.js";
 import { loadSettingsFromDB } from "./scripts/indexeddb/settings.js";
 import { initModalLogin } from "./scripts/modal/modal-login.js";
 import { Audio } from "./scripts/audio.js";
-import anime from "./node_modules/animejs/lib/anime.es.js";
+import anime from "./scripts/animejs/lib/anime.es.js";
 
 anime({
   targets: ".preloader__logo",
