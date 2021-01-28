@@ -1,4 +1,5 @@
 /** Null styles */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 html {
   box-sizing: border-box;
 }
@@ -136,7 +137,7 @@ template { display: none; }
 /** Styles for document */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 body {
-    font-family: 'Bangers', cursive;
+    font-family: 'Comfortaa', cursive;
     font-weight: 400;
     color: black;
 }

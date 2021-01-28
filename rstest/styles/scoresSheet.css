@@ -13,7 +13,7 @@
 [data-ss-table-mc] {
     display:grid;
     grid-template-rows: repeat(14,20px);
-    grid-template-columns: repeat(1,110px);
+    grid-template-columns: repeat(1,130px);
 }
 [data-player-columns] {
     display: grid;
@@ -78,7 +78,7 @@
     [data-ss-table-mc] {
         display:grid;
         grid-template-rows: repeat(14,17px);
-        grid-template-columns: repeat(1,100px);
+        grid-template-columns: repeat(1,145px);
     }
     [data-player-columns] {
         display: grid;
