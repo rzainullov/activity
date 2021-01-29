@@ -10,7 +10,7 @@ import { Audio } from "./scripts/audio.js";
 import anime from "./scripts/animejs/lib/anime.es.js";
 
 anime({
-  targets: ".preloader__logo",
+  targets: ".preloader__log",
   rotate: "40turn",
   loop: true,
   easing: "steps(15)",

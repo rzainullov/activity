@@ -6,7 +6,6 @@
     z-index: 9999;
 }
 .preloader__logo {
-    margin: 30vh auto 0px;
-    width: fit-content;
-    height: fit-content;
+    margin: 40vh auto 0px;  
+    width: 150px;   
 }
