@@ -7,5 +7,6 @@
 }
 .preloader__logo {
     margin: 40vh auto 0px;  
-    width: 150px;   
+    width: 104px;   
+    padding: 0 auto;
 }
