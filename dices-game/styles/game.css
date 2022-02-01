@@ -1,0 +1,292 @@
+.preloader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh; 
+    background:black;
+    z-index: 9999;
+}
+.preloader__container {
+    margin: 40vh auto 0px;  
+    width: 104px;   
+    padding: 0 auto;
+}
+.rolling_1 {
+    animation: first_dice 1s ease-out;
+    z-index:1;
+}
+.rolling_2 {
+    animation: second_dice 1s ease-out;
+    animation-delay:100ms;
+    z-index:2;
+}
+.rolling_3 {
+    animation: third_dice 1s ease-out;
+    animation-delay:200ms;
+    z-index:3;
+}
+.rolling_4 {
+    animation: fourth_dice 1s ease-out;
+    animation-delay:250ms;
+    z-index:4;
+}
+
+.rolling_5 {
+    animation: fifth_dice 1s ease-out;
+    animation-delay:250ms;
+    z-index:5;
+}
+
+/* start keyframes for rolling animation */
+@keyframes first_dice {
+    91.63% {
+        top:calc(90% - (11*7.5%));
+        left:calc(45% - (11*2.5%)); 
+        background:url('../img/game/rolling/6-2_75.png') center / cover no-repeat;
+    }
+    83.3% {
+        top:calc(90% - (10*7.5%));
+        left:calc(45% - (10*2.5%)); 
+        background:url('../img/game/rolling/6-2.png') center / cover no-repeat;
+    }
+    74.97% {
+        top:calc(90% - (8*7.5%));
+        left:calc(45% - (9*2.5%)); 
+        background:url('../img/game/rolling/6-2_25.png') center / cover no-repeat;
+    }
+    66.64% {
+        top:calc(90% - (8*7.5%));
+        left:calc(45% - (8*2.5%)); 
+        background:url('../img/game/rolling/6.png') center / cover no-repeat;
+    }
+    58.31% {
+        top:calc(90% - (7*7.5%));
+        left:calc(45% - (7*2.5%)); 
+        background:url('../img/game/rolling/5-6_75.png') center / cover no-repeat; 
+    }
+    49.98% {
+        top:calc(90% - (5*7.5%));
+        left:calc(45% - (6*2.5%));  
+        background:url('../img/game/rolling/5-6.png') center / cover no-repeat;
+    }
+    41.65% {
+        top: calc(90% - (5*7.5%));
+        left:calc(45% - (5*2.5%)); 
+        background:url('../img/game/rolling/5-6_25.png') center / cover no-repeat;
+    }
+    33.32% {
+        top: calc(90% - (4*7.5%));
+        left:calc(45% - (4*2.5%));
+        background:url('../img/game/rolling/5.png') center / cover no-repeat;
+    }
+    24.99% {
+        top: calc(90% - (3*7.5%));
+        left:calc(45% - (3*2.5%));
+        background:url('../img/game/rolling/1-5_75.png') center / cover no-repeat;
+    }
+    16.66% {
+        top: calc(90% - (2*7.5%));
+        left:calc(45% - (2*2.5%));  
+        background:url('../img/game/rolling/1-5.png') center / cover no-repeat;
+    } 
+    8.33% {
+        top:calc(90% - (1*7.5%));
+        left:calc(45% - (1*2.5%));  
+        background:url('../img/game/rolling/1-5_25.png') center / cover no-repeat;
+    }
+    
+}
+@keyframes second_dice {
+    91.63% {
+        top:calc(85% - (11*7.1%));
+        left:calc(45% - (11*0.4%)); 
+        background:url('../img/game/rolling/6-2_75.png') center / cover no-repeat;
+    }
+    83.3% {
+        top:calc(85% - (10*7.1%));
+        left:calc(45% - (10*0.4%)); 
+        background:url('../img/game/rolling/6-2.png') center / cover no-repeat;
+    }
+    74.97% {
+        top:calc(85% - (8*7.1%));
+        left:calc(45% - (9*0.4%)); 
+        background:url('../img/game/rolling/6-2_25.png') center / cover no-repeat;
+    }
+    66.64% {
+        top:calc(85% - (8*7.1%));
+        left:calc(45% - (8*0.4%)); 
+        background:url('../img/game/rolling/6.png') center / cover no-repeat;
+    }
+    58.31% {
+        top:calc(85% - (7*7.1%));
+        left:calc(45% - (7*0.4%)); 
+        background:url('../img/game/rolling/5-6_75.png') center / cover no-repeat; 
+    }
+    49.98% {
+        top:calc(85% - (5*7.1%));
+        left:calc(45% - (6*0.4%));  
+        background:url('../img/game/rolling/5-6.png') center / cover no-repeat;
+    }
+    41.65% {
+        top: calc(85% - (5*7.1%));
+        left:calc(45% - (5*0.4%)); 
+        background:url('../img/game/rolling/5-6_25.png') center / cover no-repeat;
+    }
+    33.32% {
+        top: calc(85% - (4*7.1%));
+        left:calc(45% - (4*0.4%));
+        background:url('../img/game/rolling/5.png') center / cover no-repeat;
+    }
+    24.99% {
+        top: calc(85% - (3*7.1%));
+        left:calc(45% - (3*0.4%));
+        background:url('../img/game/rolling/1-5_75.png') center / cover no-repeat;
+    }
+    16.66% {
+        top: calc(85% - (2*7.1%));
+        left:calc(45% - (2*0.4%));  
+        background:url('../img/game/rolling/1-5.png') center / cover no-repeat;
+    } 
+    8.33% {
+        top:calc(85% - (1*7.1%));
+        left:calc(45% - (1*0.4%));  
+        background:url('../img/game/rolling/1-5_25.png') center / cover no-repeat;
+    }
+    
+}
+@keyframes third_dice {
+    91.63% {
+        top:calc(75% - (11*6.25%));
+        right:calc(45% - (11*2.08%)); 
+        background:url('../img/game/rolling/6-2_75.png') center / cover no-repeat;
+    }
+    83.3% {
+        top:calc(75% - (10*6.25%));
+        right:calc(45% - (10*2.08%)); 
+        background:url('../img/game/rolling/6-2.png') center / cover no-repeat;
+    }
+    74.97% {
+        top:calc(75% - (8*6.25%));
+        right:calc(45% - (9*2.08%)); 
+        background:url('../img/game/rolling/6-2_25.png') center / cover no-repeat;
+    }
+    66.64% {
+        top:calc(75% - (8*6.25%));
+        right:calc(45% - (8*2.08%)); 
+        background:url('../img/game/rolling/6.png') center / cover no-repeat;
+    }
+    58.31% {
+        top:calc(75% - (7*6.25%));
+        right:calc(45% - (7*2.08%)); 
+        background:url('../img/game/rolling/5-6_75.png') center / cover no-repeat; 
+    }
+    49.98% {
+        top:calc(75% - (5*6.25%));
+        right:calc(45% - (6*2.08%));  
+        background:url('../img/game/rolling/5-6.png') center / cover no-repeat;
+    }
+    41.65% {
+        top: calc(75% - (5*6.25%));
+        right:calc(45% - (5*2.08%)); 
+        background:url('../img/game/rolling/5-6_25.png') center / cover no-repeat;
+    }
+    33.32% {
+        top: calc(75% - (4*6.25%));
+        right:calc(45% - (4*2.08%));
+        background:url('../img/game/rolling/5.png') center / cover no-repeat;
+    }
+    24.99% {
+        top: calc(75% - (2*6.25%));
+        right:calc(45% - (3*2.08%));
+        background:url('../img/game/rolling/1-5_75.png') center / cover no-repeat;
+    }
+    16.66% {
+        top: calc(75% - (2*6.25%));
+        right:calc(45% - (2*2.08%));  
+        background:url('../img/game/rolling/1-5.png') center / cover no-repeat;
+    } 
+    8.33% {
+        top:calc(75% - (1*6.25%));
+        right:calc(45% - (1*2.08%));  
+        background:url('../img/game/rolling/1-5_25.png') center / cover no-repeat;
+    }
+    
+}
+@keyframes fourth_dice {
+   
+    87.5% {
+        bottom:calc(15% - (1*1.875%));
+        right:calc(45% - (7*1.875%)); 
+        background:url('../img/game/rolling/5-6_75.png') center / cover no-repeat; 
+    }
+    75% {
+        bottom:calc(15% - (2*1.875%));
+        right:calc(45% - (6*1.875%));  
+        background:url('../img/game/rolling/5-6.png') center / cover no-repeat;
+    }
+    62.5% {
+        bottom: calc(15% - (3*1.875%));
+        right:calc(45% - (5*1.875%)); 
+        background:url('../img/game/rolling/5-6_25.png') center / cover no-repeat;
+    }
+    50% {
+        bottom: calc(15% + (5*1.875%));
+        right:calc(45% - (4*1.875%));
+        background:url('../img/game/rolling/5.png') center / cover no-repeat;
+    }
+    37.5% {
+        bottom: calc(15% - (6*1.875%));
+        right:calc(45% - (3*1.875%));
+        background:url('../img/game/rolling/1-5_75.png') center / cover no-repeat;
+    }
+    25% {
+        bottom: calc(15% + (6*1.875%));
+        right:calc(45% - (2*1.875%));  
+        background:url('../img/game/rolling/1-5.png') center / cover no-repeat;
+    } 
+    12.5% {
+        bottom:calc(15% + (7*1.875%));
+        right:calc(45% - (1*1.875%));  
+        background:url('../img/game/rolling/1-5_25.png') center / cover no-repeat;
+    }
+    
+}
+
+@keyframes fifth_dice {
+   
+    87.5% {
+        bottom:calc(10% - (1*1.25%));
+        right:calc(45% + (7*1.875%)); 
+        background:url('../img/game/rolling/5-6_75.png') center / cover no-repeat; 
+    }
+    75% {
+        bottom:calc(10% - (2*1.25%));
+        right:calc(45% + (6*1.875%));  
+        background:url('../img/game/rolling/5-6.png') center / cover no-repeat;
+    }
+    62.5% {
+        bottom: calc(10% - (3*1.25%));
+        right:calc(45% + (5*1.875%)); 
+        background:url('../img/game/rolling/5-6_25.png') center / cover no-repeat;
+    }
+    50% {
+        bottom: calc(10% + (5*1.25%));
+        right:calc(45% + (4*1.875%));
+        background:url('../img/game/rolling/5.png') center / cover no-repeat;
+    }
+    37.5% {
+        bottom: calc(10% - (6*1.25%));
+        right:calc(45% + (3*1.875%));
+        background:url('../img/game/rolling/1-5_75.png') center / cover no-repeat;
+    }
+    25% {
+        bottom: calc(10% + (6*1.25%));
+        right:calc(45% + (2*1.875%));  
+        background:url('../img/game/rolling/1-5.png') center / cover no-repeat;
+    } 
+    12.5% {
+        bottom:calc(10% + (7*1.25%));
+        right:calc(45% + (1*1.875%));  
+        background:url('../img/game/rolling/1-5_25.png') center / cover no-repeat;
+    }
+    
+}
