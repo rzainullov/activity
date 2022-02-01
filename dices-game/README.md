@@ -8,7 +8,7 @@ https://github.com/Maxtadont
 https://github.com/rzainullov  
 
 Инструкция по запуску приложения:  
-1) Перейдите по ссылке на приложение: https://sitecreator143.github.io/RS-clone  
+1) Перейдите по ссылке на приложение: https://rzainullov.github.io/activity/dices-game/
 2) Зарегистрируйте локальный аккаунт, нажав "Sign up"  
 3) Войдите в свой аккаунт, введя логин и пароль, указанные при регистрации  
 4) В разделе "Settings" можно выбрать количество игроков, язык, звук и цвет поля  
