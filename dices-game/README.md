@@ -35,4 +35,4 @@ Hotkeys.
 Адаптация для телефона и планшета.  
   
 Посмотреть работу приложения и поиграть:  
-https://sitecreator143.github.io/RS-clone
+https://rzainullov.github.io/activity/dices-game/
